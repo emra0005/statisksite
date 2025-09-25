@@ -55,3 +55,49 @@ body {
   text-decoration: underline;
   font-size: 14px;
 }
+
+.badge-sale {
+  background: #e11d48;
+}
+
+/* faded billede når udsolgt */
+.card.soldout img {
+  opacity: 0.45;
+}
+
+/* product.html */
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.6fr;
+  gap: 20px;
+}
+
+.product img {
+  max-width: 100%;
+}
+
+/* højre side */
+
+.buy {
+  background: #cbc6c6;
+  border-radius: 2px;
+  padding: 16px;
+  color: white;
+}
+select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+}
+.btn {
+  width: 100%;
+  padding: 14px 16px;
+  border: 0;
+  border-radius: 10px;
+  background: #fff;
+  color: #222;
+  font-weight: 600;
+  cursor: pointer;
+}
