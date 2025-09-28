@@ -67,13 +67,13 @@ body {
 
 /* product.html */
 
-.product {
+#product {
   display: grid;
   grid-template-columns: 1fr 1fr 0.6fr;
   gap: 20px;
 }
 
-.product img {
+#product img {
   max-width: 100%;
 }
 
