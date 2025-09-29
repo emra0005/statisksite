@@ -23,21 +23,22 @@ productList.innerHTML = `
       </section>
       
       <section class="info">
-        <h2>${product.articletype}</h2>
+        <h2>${product.brandname}</h2>
         <p>
-          <strong>Brand Name</strong> <br />${product.productdisplayname}
+          <strong>${product.productdisplayname}</strong> 
+          <br />
         </p>
         
-        <p><strong>Inventory number</strong><br />1163</p>
+        <p>${product.price},-</p>
         <br />
 
-        <h2>Nike</h2>
-        <p>Nike, creating experiences for today's athlete</p>
+        <h2>Få på lager</h2>
+        <p>Få på lager</p>
       </section>
 
      
       <aside class="buy">
-        <h2>Sahara Team India<br />Fanwear Round Neck<br />Jersey</h2>
+        <h2></h2>
         <br />
          <p> ${product.brandname} | ${product.articletype} </p>
       
