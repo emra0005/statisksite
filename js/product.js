@@ -17,18 +17,17 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
 productList.innerHTML = `
    <section class="media">
         <img 
-          src="https://kea-alt-del.dk/t7/images/640/${product.id}.webp"
+          src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp"
           alt="Produktbillede"
         />
       </section>
       
       <section class="info">
-        <h2>Product Information</h2>
+        <h2>${product.articletype}</h2>
         <p>
-          <strong>Model Name</strong> <br />Sahara Team India Fanwear Round Neck
-          Jersey
+          <strong>Brand Name</strong> <br />${product.productdisplayname}
         </p>
-        <p><strong>Color</strong><br />Blue</p>
+        
         <p><strong>Inventory number</strong><br />1163</p>
         <br />
 
@@ -40,7 +39,8 @@ productList.innerHTML = `
       <aside class="buy">
         <h2>Sahara Team India<br />Fanwear Round Neck<br />Jersey</h2>
         <br />
-        <p class="meta">Nike | Tshirts</p>
+         <p> ${product.brandname} | ${product.articletype} </p>
+      
         <br />
 
         <label class="field">

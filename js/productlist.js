@@ -6,7 +6,7 @@ const category = params.get("category");
 const productlistContainer = document.querySelector("#product-grid");
 const header = document.querySelector("h2").textContent = category
 
-fetch(`https://kea-alt-del.dk/t7/api/products?limit=20&category=${category}`)
+fetch(`https://kea-alt-del.dk/t7/api/products?limit=100&category=${category}`)
 .then((response)=> response.json())
 .then(data => showProducts(data))
 
@@ -18,8 +18,8 @@ function showProducts(products){
           <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="product image" />
           <span class="badge-soldout">Sold Out</span>
           <span class="badge-sale">-34%</span>
-          <h2>Sahara Team India Fanwear Round Neck Jersey</h2>
-          <p class="meta">Tshirt</p>
+          <h2>${product.productdisplayname}</h2>
+          <p class="meta">${product.brandname} ${product.articletype}</p>
           <p class="price">Prev. DKK ${product.price}</p>
           <p class="price">Now DKK ${Math.round} 1.595,-</p>
 
