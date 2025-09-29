@@ -1,18 +1,20 @@
 
 
-const product= document.querySelector ("#product");
+const productList = document.querySelector("#product");
 
-const params = URLSearchParams(window.location.search);
+const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
+
 
 
 fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
 .then((res)=> res.json())
-.then((product)=>{
-  console.log(product);
+.then((data => showProduct(data)))
+  
+ function showProduct(product) {
+  console.log(product)
 
-
-product.innerHTML= `
+productList.innerHTML = `
    <section class="media">
         <img 
           src="https://kea-alt-del.dk/t7/images/640/${product.id}.webp"
@@ -54,7 +56,7 @@ product.innerHTML= `
         <br />
         <button class="btn">Add to basket</button>
       </aside>`
-      });
+      };
 
     
 // const params = new URLSearchParams(window.location.search);

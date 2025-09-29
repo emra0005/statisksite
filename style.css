@@ -4,13 +4,13 @@ body {
 
 /* index.html */
 
-.categories {
+.categorilist {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
 }
 
-.categories a {
+.categorilist a {
   background-color: #888;
   color: white;
   padding: 2rem;

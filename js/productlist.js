@@ -1,13 +1,17 @@
-console. log("plist")
+
+const params = new URLSearchParams(window.location.search);
+const category = params.get("category");
+
 
 const productlistContainer = document.querySelector("#product-grid");
+const header = document.querySelector("h2").textContent = category
 
-fetch('https://kea-alt-del.dk/t7/api/products')
+fetch(`https://kea-alt-del.dk/t7/api/products?limit=20&category=${category}`)
 .then((response)=> response.json())
 .then(data => showProducts(data))
 
 function showProducts(products){
-    console.log(products);
+  console.log(products)
     products.forEach(product=>{
         productlistContainer.innerHTML +=
         `<a class="card ${product.soldout && "soldout"} ${product.discount && "onsale"}soldout on-sale" href="product.html?id=${product.id}">
@@ -16,12 +20,10 @@ function showProducts(products){
           <span class="badge-sale">-34%</span>
           <h2>Sahara Team India Fanwear Round Neck Jersey</h2>
           <p class="meta">Tshirt</p>
-          <p class="price">Prev. DKK 1.595,-</p>
+          <p class="price">Prev. DKK ${product.price}</p>
           <p class="price">Now DKK ${Math.round} 1.595,-</p>
 
           <p class="more">Read More</p>
         </a>`
     })
 }
-
-
