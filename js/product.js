@@ -31,17 +31,15 @@ productList.innerHTML = `
         
         <p>${product.price},-</p>
         <br />
+          <p> Discount ${product.discount},-</p>
 
-        <h2>Få på lager</h2>
+     
         <p>Få på lager</p>
       </section>
 
      
       <aside class="buy">
-        <h2></h2>
-        <br />
-         <p> ${product.brandname} | ${product.articletype} </p>
-      
+        <p> ${product.brandname} | ${product.articletype} </p>
         <br />
 
         <label class="field">
