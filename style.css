@@ -1,25 +1,74 @@
 body {
   padding: 5rem;
+  background-color: rgb(192, 192, 176);
 }
 
 /* index.html */
 
-.categories {
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  color: #220101;
+  list-style-type: none;
+  padding-right: 2rem;
+  gap: 10px;
+}
+ul li a {
+  text-decoration: none;
+  color: #220101;
+  font-size: large;
+  border-radius: 12px;
+  outline: solid 2px #fffdfd;
+  padding: 10px;
+  transition: all 0.3s ease-out;
+}
+
+ul li a:hover {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+h1 {
+  color: #220101;
+}
+h2 {
+  color: #220101;
+}
+
+.categorilist {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
 }
 
-.categories a {
-  background-color: #888;
-  color: white;
+.categorilist a {
+  background-color: #220101;
+  color: rgb(248, 244, 244);
   padding: 2rem;
   text-align: center;
   border-radius: 2px;
   text-decoration: none;
+  font-size: larger;
+  box-shadow: 2px 2px 2px grey;
 }
 
 /* produktliste.html */
+
+.goback {
+  all: unset; /* fjern browserens standard-knap-styles */
+}
+.goback::before {
+  content: "\2190"; /* ← */
+  font-size: 30px;
+  line-height: 0.5;
+  color: #222;
+}
 
 .product-grid {
   display: grid;
@@ -32,7 +81,7 @@ body {
 }
 
 .card {
-  border: 1px solid #e9e9e9;
+  border: 2px solid #e9e9e9;
   color: black;
   text-decoration: none;
   padding: 12px;
@@ -67,23 +116,25 @@ body {
 
 /* product.html */
 
-.product {
+#product {
   display: grid;
   grid-template-columns: 1fr 1fr 0.6fr;
   gap: 20px;
+  border: 1px solid #220101;
 }
 
-.product img {
+#product img {
   max-width: 100%;
 }
 
 /* højre side */
 
 .buy {
-  background: #cbc6c6;
+  background: #220101;
   border-radius: 2px;
   padding: 16px;
   color: white;
+  border: #191357;
 }
 select {
   padding: 8px 10px;

@@ -5,54 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product list</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="js/productlist.js" defer></script>
   </head>
   <body>
     <main>
-      <h1>Nike</h1>
+      <button class="goback" onclick="history.back()"></button>
+      <h2>Nike</h2>
 
-      <section class="product-grid">
-        <!-- første kort -->
-        <a class="card" href="product.html">
-          <img src="img/1163.webp" alt="" />
-          <h2>Sahara Team India Fanwear Round Neck Jersey</h2>
-          <p class="meta">Tshirt</p>
-          <p class="price">DKK 1.595,-</p>
-          <p class="more">Read More</p>
-        </a>
-
-        <!-- andet kort -->
-        <a class="card on-sale" href="product.html">
-          <img src="img/1164.webp" alt="" />
-          <span class="badge-sale">-34%</span>
-          <h2>Blue T20 Indian Cricket Jersey</h2>
-          <p class="meta">Tshirt</p>
-          <p class="price">Prew. DKK 1.595,-</p>
-          <p class="price">Now DKK 1.550,-</p>
-          <p class="more">Read More</p>
-        </a>
-
-        <!-- tredje kort -->
-        <a class="card soldout" href="product.html">
-          <img src="img/1165.webp" alt="" />
-          <span class="badge-soldout">Sold Out</span>
-          <h2>Sahara Team India Fanwear Round Neck Jersey</h2>
-          <p class="meta">Tshirt</p>
-          <p class="price">DKK 1.595,-</p>
-          <p class="more">Read More</p>
-        </a>
-
-        <!-- fjerde kort -->
-        <a class="card soldout on-sale" href="product.html">
-          <img src="img/1525.webp" alt="" />
-          <span class="badge-soldout">Sold Out</span>
-          <span class="badge-sale">-34%</span>
-          <h2>Sahara Team India Fanwear Round Neck Jersey</h2>
-          <p class="meta">Tshirt</p>
-          <p class="price">Prev. DKK 1.595,-</p>
-          <p class="price">Now DKK 1.595,-</p>
-          <p class="more">Read More</p>
-        </a>
-      </section>
+      <section id="product-grid" class="product-grid"></section>
     </main>
   </body>
 </html>
