@@ -6,9 +6,22 @@ const category = params.get("category");
 const productlistContainer = document.querySelector("#product-grid");
 const header = document.querySelector("h2").textContent = category
 
+
+document.querySelector("#filters button").forEach(knap=>knap.addEventListener("click", showFiltered))
+function showFiltered(){
+  console.log("showFiltered");
+
+}
+
 fetch(`https://kea-alt-del.dk/t7/api/products?limit=100&category=${category}`)
 .then((response)=> response.json())
-.then(data => showProducts(data))
+.then((data) => {
+  allData = data;
+  showProducts(alldata); 
+});
+
+
+
 
 function showProducts(products){
   console.log(products)
