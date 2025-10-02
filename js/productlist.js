@@ -7,15 +7,28 @@ const productlistContainer = document.querySelector("#product-grid");
 const header = document.querySelector("h2").textContent = category
 
 
-document.querySelectorAll("#filters").forEach((knap) => knap.addEventListener("click", showFiltered));
+document.querySelector("#filters").addEventListener("click", showFiltered);
+document.querySelector("#sorting").addEventListener("click", showSorted);
 
 
-function showFiltered(){
-  const gender = this.dataset.gender;
-  if(filter == "All"){
+function showSorted(event){
+  const direction = event.target.dataset.direction;
+  if(direction == "lohi"){
+    allData.sort((firstItem, secondItem)=>firstItem.price - secondItem.price);
+  } else {
+    allData.sort((firstItem, secondItem)=> secondItem.price - firstItem.price);
+  }
+  showProducts(allData);
+}
+
+
+function showFiltered(event){
+  console.log(event.target)
+  const gender = event.target.dataset.gender;
+  if(gender == "All"){
     showProducts (allData);
   } else {
-    const udsnit = allData.filter((product)=> product.gender === filter);
+    const udsnit = allData.filter(product=> product.gender === gender);
     showProducts(udsnit);
   }
 }
